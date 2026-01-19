@@ -38,53 +38,53 @@ mongoose.connect("mongodb://localhost:27017/testdb")
 
     console.log("===== A) READ QUERIES =====\n");
 
-    // A1: Print all students
-    console.log("A1. All Students:");
-    let result = await Student.find();
-    console.log(result);
-    console.log();
+    // // A1: Print all students
+    // console.log("A1. All Students:");
+    // let result = await Student.find();
+    // console.log(result);
+    // console.log();
 
-    // A2: Print only students who live in "Coimbatore"
-    console.log("A2. Students from Coimbatore:");
-    result = await Student.find({ city: "Coimbatore" });
-    console.log(result);
-    console.log();
+    // // A2: Print only students who live in "Coimbatore"
+    // console.log("A2. Students from Coimbatore:");
+    // result = await Student.find({ city: "Coimbatore" });
+    // console.log(result);
+    // console.log();
 
-    // A3: Print students with age >= 21
-    console.log("A3. Students with age >= 21:");
-    result = await Student.find({ age: { $gte: 21 } });
-    console.log(result);
-    console.log();
+    // // A3: Print students with age >= 21
+    // console.log("A3. Students with age >= 21:");
+    // result = await Student.find({ age: { $gte: 21 } });
+    // console.log(result);
+    // console.log();
 
-    // A4: Print students with marks > 80
-    console.log("A4. Students with marks > 80:");
-    result = await Student.find({ marks: { $gt: 80 } });
-    console.log(result);
-    console.log();
+    // // A4: Print students with marks > 80
+    // console.log("A4. Students with marks > 80:");
+    // result = await Student.find({ marks: { $gt: 80 } });
+    // console.log(result);
+    // console.log();
 
-    // A5: Find one student whose name is "Priya"
-    console.log("A5. Find Priya (findOne):");
-    result = await Student.findOne({ name: "Priya" });
-    console.log(result);
-    console.log();
+    // // A5: Find one student whose name is "Priya"
+    // console.log("A5. Find Priya (findOne):");
+    // result = await Student.findOne({ name: "Priya" });
+    // console.log(result);
+    // console.log();
 
-    // A6: Find students who are in MERN course
-    console.log("A6. Students in MERN course:");
-    result = await Student.find({ course: "MERN" });
-    console.log(result);
-    console.log();
+    // // A6: Find students who are in MERN course
+    // console.log("A6. Students in MERN course:");
+    // result = await Student.find({ course: "MERN" });
+    // console.log(result);
+    // console.log();
 
-    // A7: Find students who are from Chennai AND marks >= 60
-    console.log("A7. Students from Chennai AND marks >= 60:");
-    result = await Student.find({ city: "Chennai", marks: { $gte: 60 } });
-    console.log(result);
-    console.log();
+    // // A7: Find students who are from Chennai AND marks >= 60
+    // console.log("A7. Students from Chennai AND marks >= 60:");
+    // result = await Student.find({ city: "Chennai", marks: { $gte: 60 } });
+    // console.log(result);
+    // console.log();
 
-    // A8: Find students who are from Bangalore OR age < 20
-    console.log("A8. Students from Bangalore OR age < 20:");
-    result = await Student.find({ $or: [{ city: "Bangalore" }, { age: { $lt: 20 } }] });
-    console.log(result);
-    console.log();
+    // // A8: Find students who are from Bangalore OR age < 20
+    // console.log("A8. Students from Bangalore OR age < 20:");
+    // result = await Student.find({ $or: [{ city: "Bangalore" }, { age: { $lt: 20 } }] });
+    // console.log(result);
+    // console.log();
 
     // // ============================================
     // // B) SORT / LIMIT / PROJECTION
@@ -122,27 +122,27 @@ mongoose.connect("mongodb://localhost:27017/testdb")
     // console.log();
 
 
-    console.log("===== C) UPDATE QUERIES =====\n");
+    // console.log("===== C) UPDATE QUERIES =====\n");
 
-    // C16: Update "Karthik" city to "Hyderabad"
-    await Student.updateOne({ name: "Karthik" }, { city: "Hyderabad" });
-    console.log("C16. Updated Karthik city to Hyderabad - Updated successfully");
+    // // C16: Update "Karthik" city to "Hyderabad"
+    // await Student.updateOne({ name: "Karthik" }, { city: "Hyderabad" });
+    // console.log("C16. Updated Karthik city to Hyderabad - Updated successfully");
 
-    // C17: Update "Sneha" marks to 80
-    await Student.updateOne({ name: "Sneha" }, { marks: 80 });
-    console.log("C17. Updated Sneha marks to 80 - Updated successfully");
+    // // C17: Update "Sneha" marks to 80
+    // await Student.updateOne({ name: "Sneha" }, { marks: 80 });
+    // console.log("C17. Updated Sneha marks to 80 - Updated successfully");
 
-    // C18: Increase "Meena" marks by +10 (use $inc)
-    await Student.updateOne({ name: "Meena" }, { $inc: { marks: 10 } });
-    console.log("C18. Increased Meena marks by +10 - Updated successfully");
+    // // C18: Increase "Meena" marks by +10 (use $inc)
+    // await Student.updateOne({ name: "Meena" }, { $inc: { marks: 10 } });
+    // console.log("C18. Increased Meena marks by +10 - Updated successfully");
 
-    // C19: Update all Chennai students course to "MERN"
-    await Student.updateMany({ city: "Chennai" }, { course: "MERN" });
-    console.log("C19. Updated all Chennai students course to MERN - Updated successfully");
+    // // C19: Update all Chennai students course to "MERN"
+    // await Student.updateMany({ city: "Chennai" }, { course: "MERN" });
+    // console.log("C19. Updated all Chennai students course to MERN - Updated successfully");
 
-    // C20: Add +5 marks to all Coimbatore students
-    await Student.updateMany({ city: "Coimbatore" }, { $inc: { marks: 5 } });
-    console.log("C20. Added +5 marks to all Coimbatore students - Updated successfully\n");
+    // // C20: Add +5 marks to all Coimbatore students
+    // await Student.updateMany({ city: "Coimbatore" }, { $inc: { marks: 5 } });
+    // console.log("C20. Added +5 marks to all Coimbatore students - Updated successfully\n");
 
    
     console.log("===== D) DELETE QUERIES =====\n");
