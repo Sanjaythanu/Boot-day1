@@ -13,9 +13,9 @@ mongoose.connect("mongodb://localhost:27017/testdb")
     await Person.create({name:"Kamal",age:20});
     console.log("Persons Inserted Succesfully.")
 
-    // Read
-    const allpeople =await Person.find();
-    console.log("All People: ",allpeople);
+    // // Read
+    // const allpeople =await Person.find();
+    // console.log("All People: ",allpeople);
 
 
     // // update
