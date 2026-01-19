@@ -23,7 +23,7 @@ mongoose.connect("mongodb://localhost:27017/testdb")
     console.log("Sanjay's age updated");
     // delete
 
-    await Person.deleteOne({name:"Sanjay"});
-    console.log("Sanjay deleted");
+    // await Person.deleteOne({name:"Sanjay"});
+    // console.log("Sanjay deleted");
 })
 .catch(err=>console.error(err));
