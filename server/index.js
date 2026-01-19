@@ -7,23 +7,33 @@ mongoose.connect("mongodb://localhost:27017/testdb")
         "Person",{name:String,age:Number},"person"
     )
     // Insert
-    await Person.create({name:"Sanjay",age:20});
+    await Person.create({name:"Sanjay",age:21});
     await Person.create({name:"Kanishk",age:17});
-    // await Person.create({name:"Kishore",age:20});
-    // await Person.create({name:"Kamal",age:20});
-    // console.log("Persons Inserted Succesfully.")
+     await Person.create({name:"Kishore",age:45});
+     await Person.create({name:"Kamal",age:12});
+    console.log("Persons Inserted Succesfully.")
 
-    // // Read
-    // const allpeople =await Person.find();
-    // console.log("All People: ",allpeople);
+    //  Read
+     const allpeople =await Person.find();
+     console.log("All People: ",allpeople);
 
 
-    // // update
-    // await Person.updateOne({name:"Sanjay"},{age:19});
-    // console.log("Sanjay's age updated");
-    // delete
+    //  update
+    //  await Person.updateOne({name:"Sanjay"},{age:19});
+    //  console.log("Sanjay's age updated");
+    //  delete
 
-    // await Person.deleteOne({name:"Sanjay"});
-    // console.log("Sanjay deleted");
+    //  await Person.deleteOne({name:"Sanjay"});
+    //  console.log("Sanjay deleted");
+
+
+    // Youngest
+      const youngest =await Person.findOne().sort({age:1});
+      console.log("Youngest age is: ",youngest);
+
+    // Eldest
+      const eldest =await Person.findOne().sort({age:-1});
+      console.log("Eldest age is: ",eldest);
+
 })
 .catch(err=>console.error(err));
