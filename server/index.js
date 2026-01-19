@@ -145,33 +145,33 @@ mongoose.connect("mongodb://localhost:27017/testdb")
     console.log("C20. Added +5 marks to all Coimbatore students - Updated successfully\n");
 
    
-    console.log("===== D) DELETE QUERIES =====\n");
+//     console.log("===== D) DELETE QUERIES =====\n");
 
-    // D21: Delete one student whose name is "Arjun"
-    let deleteResult = await Student.deleteOne({ name: "Arjun" });
-    console.log(`D21. Deleted Arjun - ${deleteResult.deletedCount} student(s) deleted`);
+//     // D21: Delete one student whose name is "Arjun"
+//     let deleteResult = await Student.deleteOne({ name: "Arjun" });
+//     console.log(`D21. Deleted Arjun - ${deleteResult.deletedCount} student(s) deleted`);
 
-    // D22: Delete all students whose marks are below 50
-    deleteResult = await Student.deleteMany({ marks: { $lt: 50 } });
-    console.log(`D22. Deleted all students with marks < 50 - ${deleteResult.deletedCount} student(s) deleted`);
+//     // D22: Delete all students whose marks are below 50
+//     deleteResult = await Student.deleteMany({ marks: { $lt: 50 } });
+//     console.log(`D22. Deleted all students with marks < 50 - ${deleteResult.deletedCount} student(s) deleted`);
 
-    // D23: Delete all students whose age is less than 20
-    deleteResult = await Student.deleteMany({ age: { $lt: 20 } });
-    console.log(`D23. Deleted all students with age < 20 - ${deleteResult.deletedCount} student(s) deleted\n`);
+//     // D23: Delete all students whose age is less than 20
+//     deleteResult = await Student.deleteMany({ age: { $lt: 20 } });
+//     console.log(`D23. Deleted all students with age < 20 - ${deleteResult.deletedCount} student(s) deleted\n`);
 
     
-    console.log("===== E) FINAL OUTPUT =====\n");
+//     console.log("===== E) FINAL OUTPUT =====\n");
 
-    // E24: Print the final list of students after all updates & deletes
-    console.log("E24. Final list of students after all updates & deletes:");
-    result = await Student.find();
-    console.log(result);
-    console.log();
+//     // E24: Print the final list of students after all updates & deletes
+//     console.log("E24. Final list of students after all updates & deletes:");
+//     result = await Student.find();
+//     console.log(result);
+//     console.log();
 
-    // E25: Print the total count of remaining students
-    const count = await Student.countDocuments();
-    console.log(`E25. Total remaining students: ${count}\n`);
+//     // E25: Print the total count of remaining students
+//     const count = await Student.countDocuments();
+//     console.log(`E25. Total remaining students: ${count}\n`);
 
-    process.exit(0);
-  })
-  .catch(err => console.error(err));
+//     process.exit(0);
+//   })
+//   .catch(err => console.error(err));
