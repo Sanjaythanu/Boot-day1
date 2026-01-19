@@ -18,9 +18,9 @@ mongoose.connect("mongodb://localhost:27017/testdb")
     console.log("All People: ",allpeople);
 
 
-    // update
-    await Person.updateOne({name:"Sanjay"},{age:19});
-    console.log("Sanjay's age updated");
+    // // update
+    // await Person.updateOne({name:"Sanjay"},{age:19});
+    // console.log("Sanjay's age updated");
     // delete
 
     // await Person.deleteOne({name:"Sanjay"});
