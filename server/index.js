@@ -9,9 +9,9 @@ mongoose.connect("mongodb://localhost:27017/testdb")
     // Insert
     await Person.create({name:"Sanjay",age:20});
     await Person.create({name:"Kanishk",age:17});
-    await Person.create({name:"Kishore",age:20});
-    await Person.create({name:"Kamal",age:20});
-    console.log("Persons Inserted Succesfully.")
+    // await Person.create({name:"Kishore",age:20});
+    // await Person.create({name:"Kamal",age:20});
+    // console.log("Persons Inserted Succesfully.")
 
     // // Read
     // const allpeople =await Person.find();
